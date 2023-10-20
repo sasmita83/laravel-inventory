@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');});
+Route::get('/', function () {return view('welcome');});
+
 route::get('/login',[LoginController::class,'index'])->middleware('guest')->name('login');
 route::post('/login',[LoginController::class,'authenticate'])->name('kirim-data-login');
 route::get('/logout',[LoginController::class,'logout'])->name('logout');
