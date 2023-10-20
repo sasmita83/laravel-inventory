@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MasterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,6 @@ route::get('/login',[LoginController::class,'index'])->middleware('guest')->name
 route::post('/login',[LoginController::class,'authenticate'])->name('kirim-data-login');
 route::get('/logout',[LoginController::class,'logout'])->name('logout');
 route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
+route::get('/master', [MasterController::class,'index'])
+    ->name('master')
+    ->middleware('auth');
