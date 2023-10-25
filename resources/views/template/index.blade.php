@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -14,22 +14,21 @@
         <script src=" {{asset ('bootstrap-5.3.2/js/bootstrap.bundle.min.js')}}"></script>
         <script src=" {{asset ('fontawesome 6.4.2/js/all.min.js')}}"></script>
         <script src=" {{asset ('scripts.js')}}"></script>
-    </head>
-    <body class="sb-nav-fixed">
-        @include('template.navigasi-atas')
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
+     </head>
+      <body class="sb-nav-fixed">
+         @include('template.navigasi-atas')
+         <div id="layoutSidenav">
+              <div id="layoutSidenav_nav">
                 @include('template.navigasi-kiri')
-            </div>
-            <div id="layoutSidenav_content">
+              </div>
+             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4 pt-4">
                         @yield('konten')
-
                     </div>
                 </main>
                 @include('template.footer')
-            </div>
-        </div>
-         </body>
+             </div>
+         </div>
+      </body>
 </html>
