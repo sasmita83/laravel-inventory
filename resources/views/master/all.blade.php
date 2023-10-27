@@ -12,7 +12,7 @@
     </li>
 
   </ul>
-  <div class="tab-conten pt-3">
+  <div class="tab-conten p-4">
     @yield('master-konten')
 
   </div>

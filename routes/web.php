@@ -37,3 +37,8 @@ route::get('/master/kategori', [MasterKategoriController::class,'index'])
 route::get('/master/gudang', [MasterGudangController::class,'index'])
     ->name('master-gudang')
     ->middleware('auth');
+
+route::get('/master/barang/tambah', [MasterBarangController::class,'create'])
+    ->name('master-barang-tambah')
+    ->middleware('auth');
+
