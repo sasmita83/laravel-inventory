@@ -25,6 +25,7 @@ route::get('/login',[LoginController::class,'index'])->middleware('guest')->name
 route::post('/login',[LoginController::class,'authenticate'])->name('kirim-data-login');
 route::get('/logout',[LoginController::class,'logout'])->name('logout');
 route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
+
 route::get('/master', [MasterController::class,'index'])
     ->name('master')
     ->middleware('auth');
@@ -41,4 +42,8 @@ route::get('/master/gudang', [MasterGudangController::class,'index'])
 route::get('/master/barang/tambah', [MasterBarangController::class,'create'])
     ->name('master-barang-tambah')
     ->middleware('auth');
+route::post('/master/barang/simpan', [MasterBarangController::class,'store'])
+    ->name('master-barang-simpan')
+    ->middleware('auth');
+
 
