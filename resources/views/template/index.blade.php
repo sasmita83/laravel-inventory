@@ -24,6 +24,7 @@
              <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4 pt-4">
+                        @include('template.pesankilat')
                         @yield('konten')
                     </div>
                 </main>
