@@ -30,6 +30,12 @@
         <td>{{$b->kode}}</td>
         <td>{{$b->nama}} </td>
         <td>{{$b->deskripsi}} </td>
+        <td>
+            <a href="{{ route ('master-barang-hapus',['id'=>$b->id]) }}"
+                class="btn btn-sm btn-danger rounded-circle"
+                onclick="return confirm ('Apakah Anda Yakin AKan Menghapus {{$b->kode}}')">
+                <i class=" fa fa-solid fa-trash"> </i>
+            </a>
 
       </tr>
       @endforeach

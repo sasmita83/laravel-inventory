@@ -46,4 +46,10 @@ route::post('/master/barang/simpan', [MasterBarangController::class,'store'])
     ->name('master-barang-simpan')
     ->middleware('auth');
 
+route::get('/master/barang/hapus/{id}', [MasterBarangController::class,'destroy'])
+    ->name('master-barang-hapus')
+    ->where('id','[0-9]+')
+    ->middleware('auth');
+
+
 
