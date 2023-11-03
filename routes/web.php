@@ -51,5 +51,19 @@ route::get('/master/barang/hapus/{id}', [MasterBarangController::class,'destroy'
     ->where('id','[0-9]+')
     ->middleware('auth');
 
+route::get('/master/barang/detail/{id}', [MasterBarangController::class,'show'])
+    ->name('master-barang-detail')
+    ->where('id','[0-9]+')
+    ->middleware('auth');
+
+route::get('/master/barang/edit/{id}', [MasterBarangController::class,'edit'])
+    ->name('master-barang-edit')
+    ->where('id','[0-9]+')
+    ->middleware('auth');
+
+    route::post('/master/barang/update/{id}', [MasterBarangController::class,'update'])
+    ->name('master-barang-update')
+    ->where('id','[0-9]+')
+    ->middleware('auth');
 
 

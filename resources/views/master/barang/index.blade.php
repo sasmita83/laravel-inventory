@@ -31,12 +31,22 @@
         <td>{{$b->nama}} </td>
         <td>{{$b->deskripsi}} </td>
         <td>
+            <a href="{{ route ('master-barang-detail',['id'=>$b->id]) }}"
+                class="btn btn-sm btn-success rounded-circle">
+
+                <i class=" fa fa-solid fa-eye"> </i>
+            </a>
+            <a href="{{ route ('master-barang-edit',['id'=>$b->id]) }}"
+                class="btn btn-sm btn-warning rounded-circle">
+
+                <i class=" fa fa-solid fa-pencil"> </i>
+            </a>
             <a href="{{ route ('master-barang-hapus',['id'=>$b->id]) }}"
                 class="btn btn-sm btn-danger rounded-circle"
                 onclick="return confirm ('Apakah Anda Yakin AKan Menghapus {{$b->kode}}')">
+
                 <i class=" fa fa-solid fa-trash"> </i>
             </a>
-
       </tr>
       @endforeach
     </tbody>
