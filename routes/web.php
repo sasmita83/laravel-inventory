@@ -70,3 +70,7 @@ route::get('/stok-masuk', [StokController::class,'form_stok_masuk'])
     ->name('stok-masuk')
     ->middleware('auth');
 
+route::post('/stok-in', [StokController::class,'proses_stok_masuk'])
+    ->name('stok-in')
+    ->middleware('auth');
+

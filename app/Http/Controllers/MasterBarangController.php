@@ -151,7 +151,7 @@ class MasterBarangController extends Controller
             'unique'    =>  'Kode Barang Sudah Terpakai',
 
         ];
-            $validator = validator::make($request->all(),$aturan, $pesan_indo);
+            $validator = Validator::make($request->all(),$aturan, $pesan_indo);
 
         try {
 

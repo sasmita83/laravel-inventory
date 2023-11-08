@@ -2,7 +2,8 @@
 @section('konten')
 
 <h1> Halaman Stok Masuk </h1>
-<form action="#" method="POST">
+<form action="{{ route ('stok-in') }}" method="POST">
+    @csrf
     <div class="row">
         <div class=" col-lg-6">
     <label class="form-label h5">Barang</label>
