@@ -10,8 +10,20 @@
                 <div class="sb-nav-link-icon"><i class="fa-solid fa-database"></i></div>
                 Master Data
             </a>
+            <a class="nav-link {{(Request::segment(1) == 'stok-masuk') ? 'active' : ''}}" href="{{url ('/stok-masuk')}}">
+                <div class="sb-nav-link-icon"><i class="fa-solid fa-box"></i></div>
+                Stok Masuk
 
-            </div>
+            <a class="nav-link {{(Request::segment(1) == 'transaksi') ? 'active' : ''}}" href="{{url ('/transaksi')}}">
+                <div class="sb-nav-link-icon"><i class="fa-solid fa-tent-arrow-left-right"></i></div>
+                Transaksi
+            </a>
+            <a class="nav-link {{(Request::segment(1) == 'report') ? 'active' : ''}}" href="{{url ('/report')}}">
+                <div class="sb-nav-link-icon"><i class="fa-solid fa-database"></i></div>
+                Report
+            </a>
+
+        </div>
     </div>
     <div class="sb-sidenav-footer">
         <div class="small">Logged in as:</div>

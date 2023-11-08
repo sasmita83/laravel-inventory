@@ -6,6 +6,7 @@ use App\Http\Controllers\MasterBarangController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\MasterGudangController;
 use App\Http\Controllers\MasterKategoriController;
+use App\Http\Controllers\StokController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,9 +62,11 @@ route::get('/master/barang/edit/{id}', [MasterBarangController::class,'edit'])
     ->where('id','[0-9]+')
     ->middleware('auth');
 
-    route::post('/master/barang/update/{id}', [MasterBarangController::class,'update'])
+route::post('/master/barang/update/{id}', [MasterBarangController::class,'update'])
     ->name('master-barang-update')
     ->where('id','[0-9]+')
     ->middleware('auth');
-
+route::get('/stok-masuk', [StokController::class,'form_stok_masuk'])
+    ->name('stok-masuk')
+    ->middleware('auth');
 

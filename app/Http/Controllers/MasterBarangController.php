@@ -61,7 +61,6 @@ class MasterBarangController extends Controller
                 ->withErrors($validator)->withInput();
             }else{
 
-
             $insert = MasterBarangModel::create([
 
                 'kode'                => strtoupper($request->html_kode),
@@ -89,7 +88,6 @@ class MasterBarangController extends Controller
             ->with('danger',$th->getMessage());
 
          }
-
 
     }
 
@@ -164,7 +162,6 @@ class MasterBarangController extends Controller
                 ->withErrors($validator)->withInput();
             }else{
 
-
             $update = MasterBarangModel::where('id',$id)->update([
 
                 'nama'                => strtoupper($request->html_nama),
@@ -195,8 +192,6 @@ class MasterBarangController extends Controller
     public function destroy($id_barang)
     {
         try {
-
-
 
 
             $update = MasterBarangModel::where(['id'=>$id_barang])
