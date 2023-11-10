@@ -114,7 +114,8 @@ class StokController extends Controller
             if ($validator->fails()){
                 return redirect()
                 ->route('stok-keluar')
-                ->withErrors($validator)->withInput();
+                ->withInput()
+                ->withErrors($validator);
             } else {
 
             //mengambil sisa terakhir dari data database berdasarkan kode barang
@@ -131,6 +132,7 @@ class StokController extends Controller
                 if($request->form_jumlah_keluar > $stok_sisa){
                     return redirect()
                     ->route('stok-keluar')
+                    ->withInput()
                     ->with('danger','Jumlah yang dikeluarkan melebihi stok yang ada');
                     die;
                 }
@@ -139,6 +141,7 @@ class StokController extends Controller
                     if ($request->form_jumlah_keluar <= 0){
                         return redirect()
                         ->route('stok-keluar')
+                        ->withInput()
                         ->with('danger','Jumlah Minimal Barang Yang bisa Keluar adalah 1');
                         die;
 
@@ -170,7 +173,10 @@ class StokController extends Controller
             } else {
             //jika tidak ada sisa
             //stok sisa mengambil dari data jumlah barang yang masuk
-                $keluar = $request->form_jumlah_keluar;
+            return redirect()
+            ->route('stok-keluar')
+            ->withInput()
+            ->with('danger',' Barang Belum Ada Stok Sama sekali');
             }
 
             }
@@ -178,6 +184,7 @@ class StokController extends Controller
          catch (\Throwable $th){
             return redirect()
             ->route('stok-keluar')
+            ->withInput()
             ->with('danger',$th->getMessage());
          }
 }
