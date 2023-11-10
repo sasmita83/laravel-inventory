@@ -1,8 +1,8 @@
 @extends('template.index')
 @section('konten')
 
-<h1> Stok Masuk Barang </h1>
-<form action="{{ route ('stok-in') }}" method="POST">
+<h1> Stok Keluar Barang </h1>
+<form action="{{ route ('stok-out') }}" method="POST">
     @csrf
     <div class="row">
         <div class=" col-lg-5">
@@ -21,7 +21,7 @@
     <div class="row mb-4">
         <div class="col-lg-2">
             <label class="form-label h5">Jumlah</label>
-            <input type="number" name="form_jumlah_masuk" class="form-control">
+            <input type="number" name="form_jumlah_keluar" class="form-control">
         </div>
     </div>
     <div class="row">

@@ -13,6 +13,9 @@
             <a class="nav-link {{(Request::segment(1) == 'stok-masuk') ? 'active' : ''}}" href="{{url ('/stok-masuk')}}">
                 <div class="sb-nav-link-icon"><i class="fa-solid fa-box"></i></div>
                 Stok Masuk
+            <a class="nav-link {{(Request::segment(1) == 'stok-keluar') ? 'active' : ''}}" href="{{url ('/stok-keluar')}}">
+                <div class="sb-nav-link-icon"><i class="fa-solid fa-dolly"></i></div>
+                Stok Keluar
 
             <a class="nav-link {{(Request::segment(1) == 'transaksi') ? 'active' : ''}}" href="{{url ('/transaksi')}}">
                 <div class="sb-nav-link-icon"><i class="fa-solid fa-tent-arrow-left-right"></i></div>
